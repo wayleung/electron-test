@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    We are using Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+
+
+
+    <!--<input type="button" value="click" onclick="myclick()">-->
+
+    <!--<input type="button" value="change" onclick="change('testPlanProject.json')">-->
+
+    <input type="button" value="test" onclick="test()">
+
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+
+  <script src="./datasource.js" ></script>
+<!--<script>var DataSourceObject = require('./datasource.js');</script>-->
+
+  <script>
+
+      //console.log(DataSourceObject);
+      //datasource = new DataSourceObject.DataSource();
+      datasource = new DataSource();
+      //console.log("datasource:",datasource);
+      /*var array = [
+          {id: 0, name: "aaa", age: 33},
+          {id: 1, name: "bbb", age: 25},
+          {id: 2, name: "aaa", age: 31}
+      ]
+
+
+      var object = {
+          student : [
+              {id: 0, name: "aaa", age: 33},
+              {id: 1, name: "bbb", age: 25}
+          ],
+          school : ["aa","bb"]
+      }
+
+*/
+
+
+
+      //datasource = new DataSource();
+      function myclick(){
+          //var DataSource = require('./datasource.js');
+
+          console.log(datasource);
+          console.log(datasource.getValueByKey("user"));
+      }
+
+
+      function change(){
+          //var DataSource = require('./datasource.js');
+          //datasource = new DataSource();
+          console.log(datasource);
+          console.log(datasource.setJson("testPlanProject.json"));
+          console.log(datasource.getValueByKey("version"));
+      }
+
+/*      function test() {
+          const aa = {
+              posts: [
+                  {id: 1, body: 'one', published: false},
+                  {id: 2, body: 'two', published: true}
+              ],
+              comments: [
+                  {id: 1, body: 'foo', postId: 1},
+                  {id: 2, body: 'bar', postId: 2}
+              ]
+          }
+          console.log(_.getbyid(aa.posts, 1))
+      }*/
+
+
+      function test() {
+          // console.log(datasource.getAllKeys(object));
+           //console.log(_.find(array, ['age', 31]));
+       // console.log(datasource.getFromArrayByAttr(array,'age',25))
+
+/*          datasource.setJson("db.json");
+          console.log(db.set('user.name', 'typicode')
+              .value());*/
+
+          //console.log(datasource.test());
+        //console.log(datasource.setValueFromObject(db,'student[0].age',55));
+       /* var testdata  = datasource.setJson("testPlanProject.json");
+
+        console.log(testdata.get('testPlanProjectName').value());*/
+          //console.log(datasource.setJson("globalDatas.json"));
+
+          //console.log(datasource.setJson("testPlanProject.json"));
+          //console.log(datasource.setValue('modules[0].moduleName','aaaa'));
+          //console.log(datasource.findByAttr('key','account'));
+          //console.log(datasource.setValue('comment','aa123'));
+
+          //console.log(datasource.setJson("db.json"));
+          //datasource.setJson("globalDatas.json");
+
+
+          //datasource.setJson("objectPages.json");
+
+
+          datasource.setJson("modules.json");
+
+
+
+/*          console.log(datasource.getValue("user"));
+          console.log(datasource.getCount("user"));
+          console.log(datasource.getValue("arrays"))
+          console.log(datasource.getCount("arrays"));*/
+          //console.log(datasource.removeAttr("user3"))
+          //console.log(datasource.insertObjToArray("arrays",{ id: 1, title: 'lowdb is awesome'}));
+/*          console.log(datasource.isExist("user"));
+          console.log(datasource.isExist("posts[0]"));
+          console.log(datasource.isExist("posts[9]"));*/
+
+          //console.log(datasource.getAllFromJson());
+          //console.log(datasource.getModuleInfo());
+          //console.log(datasource.getCaseInfo("moduleid_1"));
+          //console.log(datasource.getScriptInfo("moduleid_1","case1"));
+         //console.log(datasource.getScriptDataInfo("moduleid_1","case1"));
+          //datasource.setProjectName('test');
+          //console.log(datasource.getProjectName());
+          //console.log(datasource.getGlobalData("globaldataid_2"));
+          //console.log(datasource.insertGlobalData('{ "id": "globaldataid_7","key": "url","value": "https://www.baidu.com/","comment": "comment1"}'));
+          //console.log(datasource.removeGlobalData('globaldataid_3'));
+          //console.log(datasource.updateGlobalData('{ "id": "globaldataid_4","key": "url222233","value": "https://www.baidu.com/111","comment": "comment1111"}'));
+          //console.log(datasource.getObjectPage('BaiduPageAction'));
+          //console.log(datasource.insertObjectPage('{"objectPageName":"BaiduPageAction","objectElements":[{"objectName":"settingLink","objectId":"elementid_1","objectXpath":"//a[@name=\'tj_trhao123\']","comment":null},{"objectName":"searchInput\\n","objectId":"elementid_2","objectXpath":"//input[@name=\'wd\']","comment":null},{"objectName":"searchBtn","objectId":"su","objectXpath":"//button[text()=\'NEXT\']","comment":null}]}'));
+          //console.log(datasource.removeObjectPage('BaiduPageAction11'));
+          //console.log(datasource.updateObjectPage('{"objectPageName":"BaiduPageAction11","objectElements":[{"objectName":"settingLink","objectId":"elementid_1111","objectXpath":"//a[@name=\'tj_trhao123\']","comment":null},{"objectName":"searchInput\\n","objectId":"elementid_2","objectXpath":"//input[@name=\'wd\']","comment":null},{"objectName":"searchBtn","objectId":"su","objectXpath":"//button[text()=\'NEXT\']","comment":null}]}'));
+
+          //var obj  =  JSON.parse('{"id":"moduleid_3","moduleName":"testSinaModule","testCases":[]}');
+          //var obj  =  JSON.parse('{"id":"moduleid_2","moduleName":"testSinaModule2222333","testCases":[]}');
+          //console.log(datasource.insertModule(obj));
+
+
+          //console.log(datasource.removeModule('testSinaModule2'));
+          //console.log(datasource.updateModule(obj));
+          //var datasource  = getDataSource("testPlanProject","objectPages.json");
+          //var obj  = JSON.parse('{"id":"case2","caseName":"casename2","scripts":null,"status":"N","comment":"comment2","datas":null}');
+          //console.log(datasource.insertCase("moduleid_2",obj));
+
+          //var obj  = JSON.parse('{"id":"case1","Test Case Name":"casename22223333","Execute":"N","Comment":"comment2"}');
+          //console.log(datasource.getScriptInfo('case1'));
+          //var obj  = JSON.parse('{"id":"sid11111","step":"1","keword":"openUrl","objectName":null,"parameterValues":"[&{url}]","expectedValues":null,"outputValues":null,"comment":"打开浏览并输入指定的url"}');
+          //console.log(datasource.insertScript('case11',obj));
+
+
+          //var obj  = JSON.parse('{"id":"sid6666","step":"3"}');
+          //console.log(datasource.insertScript('case1',obj));
+
+          //var obj  = JSON.parse('{"id":"sid12424233","step":"4"}');
+          //console.log(datasource.updateScript(obj));
+          //console.log(datasource.getDataInfo('case1'));
+
+          //datasource.removeScript('sid6666'));
+          //updateScript
+
+          //console.log(datasource.getObjectPageInfo());
+          //console.log(datasource.getObjectPage('ooo111'));
+          //console.log(datasource.getDataInfo("case1"));
+
+          //console.log(datasource.insertDataColumn("case1","kkeyyy11","valueeee11"));
+          //console.log(datasource.removeData("28958063-e0b9-4d30-9899-1f134cc2e046"));
+          //console.log(datasource.removeObjectElement("3333"));
+          //console.log(datasource.removeObjectElement("1daee77c-ae81-4187-9f19-f5219e7a62f0"));
+          //var array  = JSON.parse('[{"id":"333","objectName":"settingLink","objectId":"elementid_1","objectXpath":"//a[@name=\'tj_trhao123\']","comment":null},{"id":"444","objectName":"settingLink","objectId":"elementid_1","objectXpath":"//a[@name=\'tj_trhao123\']","comment":null}]');
+          //console.log(datasource.removeObjectElementByArray(array));
+
+          //console.log(datasource.getDataKeys("case1"));
+          // console.log(datasource.getGlobalDataInfo());
+          //console.log(datasource.getProjectInfo());
+
+          //console.log(datasource.createProject("cccc"));
+
+          datasource.updateFileDirectory("./data/cccc/","./data/ddd/")
+
+      }
+
+
+
+
+  </script>
+</html>
